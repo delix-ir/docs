@@ -61,10 +61,10 @@ If corresponding file is stored successfully, the response will contain followin
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| uuid | string | Unique identifier of the file. It's needed for other services |
-| status | string | Currently it's always \`stored\` |
-| extension | string | Extension of the uploaded file. For example: `pdf`, `png` |
-| page\_count | integer | Number of pages in PDF file or 1 for images |
+| **uuid** | string | Unique identifier of the file. It's needed for other services |
+| **status** | string | Currently it's always \`stored\` |
+| **extension** | string | Extension of the uploaded file. For example: `pdf`, `png` |
+| **page\_count** | integer | Number of pages in PDF file or 1 for images |
 
 ### Failed File Response
 
@@ -72,8 +72,8 @@ If corresponding file is failed to be stored, the response will contain followin
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| status | string | Currently it's always `rejected` |
-| reason | [FileError](../../error-handling/errors.md) | An error enum indicating why file has not been stored |
+| **status** | string | Currently it's always `rejected` |
+| **reason** | [FileError](../../error-handling/errors.md) | An error enum indicating why file has not been stored |
 
 
 
