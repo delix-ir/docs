@@ -2,6 +2,14 @@
 
 * [Introduction](README.md)
 * [Authentication](authentication.md)
-* [Untitled](untitled-1/README.md)
-  * [Untitled](untitled-1/untitled.md)
+* [Getting Started](getting-started.md)
+
+## Features
+
+* [Managing Files](features/managing-files/README.md)
+  * [Upload New Files](features/managing-files/upload-new-files.md)
+
+## Error Handling
+
+* [Errors](error-handling/errors.md)
 
