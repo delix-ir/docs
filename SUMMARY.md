@@ -6,8 +6,11 @@
 
 ## Features
 
-* [Managing Files](features/managing-files/README.md)
-  * [Upload New Files](features/managing-files/upload-new-files.md)
+## Files
+
+* [Managing Files](files/managing-files.md)
+* [Upload New Files](files/upload-new-files.md)
+* [Resources](files/resources.md)
 
 ## Error Handling
 

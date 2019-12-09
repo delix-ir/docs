@@ -1,8 +1,8 @@
 # Errors
 
-You may face errors working with files \(uploading for example\). Here is a list of possible errors:
-
 ## FileError
+
+You may face errors working with files \(uploading for example\). Here is a list of possible errors:
 
 | Value | Description |
 | :--- | :--- |
