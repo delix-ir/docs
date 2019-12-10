@@ -96,7 +96,23 @@ ows you to get index stored files which are available to be used.
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    'data': [
+        {
+            'uuid': '123e4567-e89b-12d3-a456-426655440000',
+            'status': 'stored',
+            'extension': 'pdf',
+            'page_count': 7
+        },
+        {
+            'uuid': '7b75cdc1-7944-40eb-ac4b-6e23ca547ed4',
+            'status': 'stored',
+            'extension': 'jpeg',
+            'page_count': 1
+        },
+        ...
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
