@@ -2,7 +2,7 @@
 
 Both of OCR and PDF content extraction services require some files to be used. However, input files are being managed separately than the services.
 
-This feature helps you to request multiple services on one or many of files without uploading them in every request.
+This feature helps you to request multiple services on one or many files without uploading them in every request.
 
 ## Storage Limitations
 
