@@ -182,7 +182,7 @@ File is rejected during uploading process.
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | **status** | string | Currently it's always `rejected` |
-| **reason** | [FileError](../error-handling/errors.md) | An error enum indicating why file has not been stored |
+| **reason** | [FileError](../errors.md) | An error enum indicating why file has not been stored |
 
 
 

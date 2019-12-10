@@ -1,4 +1,4 @@
-# Errors
+# Error Handling
 
 ## FileError
 
