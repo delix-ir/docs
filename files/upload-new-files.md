@@ -31,27 +31,30 @@ An array of binary files. Only 5 files can be uploaded at each request.
 {% api-method-response %}
 {% api-method-response-example httpCode=207 %}
 {% api-method-response-example-description %}
-The response contains information about all uploaded files as an array of StoredFile and or RejectedFile.  
-Here is an example response for two uploaded files:
+The response contains information about all uploaded files as an array of StoredFile and or RejectedFile. The response respects order of files in the request:
 {% endapi-method-response-example-description %}
 
 ```
-[
-    {
-        'uuid': '123e4567-e89b-12d3-a456-426655440000',
-        'status': 'stored',
-        'extension': 'pdf',
-        'page_count': 7
-    },
-    {
-        'status': 'rejected',
-        'reason': 'PAGE_COUNT_LIMIT_EXCEEDED'
-    },
-    ...
-]
+{
+    'data': [
+        {
+            'uuid': '123e4567-e89b-12d3-a456-426655440000',
+            'status': 'stored',
+            'extension': 'pdf',
+            'page_count': 7
+        },
+        {
+            'status': 'rejected',
+            'reason': 'PAGE_COUNT_LIMIT_EXCEEDED'
+        },
+        ...
+    ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
 
