@@ -6,7 +6,7 @@
 ## Files
 
 * [Managing Files](files/managing-files.md)
-* [Upload New Files](files/upload-new-files.md)
+* [Upload Files](files/upload-new-files.md)
 * [List Files](files/list-files.md)
 * [Delete File](files/delete-file.md)
 * [Resources](files/resources.md)
