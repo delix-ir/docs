@@ -6,6 +6,7 @@
 ## Files
 
 * [Managing Files](files/managing-files.md)
+* [Resources](files/resources.md)
 
 ## Extraction Service
 
