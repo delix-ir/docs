@@ -253,5 +253,63 @@ This object includes a single output page details.
   </tbody>
 </table>## PaginatedExtractFilePages
 
+This object represents a full response of paginated async extraction result.
 
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Attribute</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p><b>data</b>
+        </p>
+        <p>ExtractFilePage[]</p>
+      </td>
+      <td style="text-align:left">All file pages in current paginated result page.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><b>links</b>
+        </p>
+        <p>Read Description</p>
+      </td>
+      <td style="text-align:left">
+        <p>Pagination links:</p>
+        <p><b>first</b>: Link to first page</p>
+        <p><b>last</b>: Link to last page</p>
+        <p><b>next</b>: Link to next page or <code>null</code> if current page is the
+          last one.</p>
+        <p><b>prev</b>: Link to previous page or <code>null</code> if current page
+          is the first one.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><b>meta</b>
+        </p>
+        <p>Read Description</p>
+      </td>
+      <td style="text-align:left">
+        <p>Pagination details:</p>
+        <p><b>current_page</b>: Number of current page in <code>page</code> query parameter.
+          <br
+          /><b>path</b>: Contains base pagination URL without <code>page</code> query.
+          <br
+          /><b>per_page</b>: Maximum number of available file page in each pagination
+          page.</p>
+        <p><b>total</b>: Total number of items in entire pagination.
+          <br /><b>last_page</b>: Number of last possible pagination page.</p>
+        <p><b>from</b>: Starting point of current page items in entire pagination.</p>
+        <p><b>to</b>: End point of current page items in entire pagination.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>

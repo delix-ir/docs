@@ -184,11 +184,31 @@ Number of the result pagination page \(not file page\).
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Responses a full PaginatedExtractFilePages.
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    'data': [
+        {
+            'number': 1,
+            'status': 'processed',
+            'text': 'محتوای صفحه اول'
+        },
+        {
+            'number': 2,
+            'status': 'failed',
+        },
+        {
+            'number': 3,
+            'status': 'processed',
+            'text': 'محتوای صفحه سوم'
+        },
+    ],
+    'links': {
+        'first': '
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -221,46 +241,88 @@ Extract UUID
 If extract is find and not cleaned from server yet, an Extract object will be returned and its \`status\` can be used to determine if extraction is done or not yet.
 {% endapi-method-response-example-description %}
 
+{% tabs %}
+{% tab title="Finished Sync Extract" %}
 ```
+{
+    'data': {
+        'uuid': 'bd18e9f7-0186-406e-86c1-3aa0ddd72c01',
+        'status': 'processed',
+        'file_type': 'images',
+        'engine': 'danlin',
+        'language': 'fa',
+        'total_files': 1
+        'total_file_pages': 1
+        'total_processing_pages': 1
+        'initial_cost': 200,
+        'failed_pages': 0,
+        'returned_credits': 0,
+        'files': [
+            {
+                'uuid': '123e4567-e89b-12d3-a456-426655440000',
+                'pages': [
+                    {
+                        'number': 1,
+                        'status': 'processed',
+                        'text': 'سلام! این محتوای صفحه اوله'
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+{% endtab %}
 
+{% tab title="Queued Async Extract" %}
 ```
+{
+    'data': {
+        'uuid': 'bd18e9f7-0186-406e-86c1-3aa0ddd72c01',
+        'status': 'processing',
+        'file_type': 'documents',
+        'engine': 'danlin',
+        'language': 'fa',
+        'total_files': 1
+        'total_file_pages': 72
+        'total_processing_pages': 10
+        'initial_cost': 1000
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Finished Async Extract" %}
+```
+{
+    'data': {
+        'uuid': 'bd18e9f7-0186-406e-86c1-3aa0ddd72c01',
+        'status': 'processed',
+        'file_type': 'documents',
+        'engine': 'danlin',
+        'language': 'fa',
+        'total_files': 1
+        'total_file_pages': 72
+        'total_processing_pages': 10
+        'initial_cost': 1000,
+        'failed_pages': 2,
+        'returned_credits': 200,
+        'files': [
+            {
+                'uuid': '123e4567-e89b-12d3-a456-426655440000',
+                'pages': 'https://api.delix.ir/v1/extracts/bd18e9f7-0186-406e-86c1-3aa0ddd72c01/files/123e4567-e89b-12d3-a456-426655440000/contents'
+            }
+        ]
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-If extract is not found or is removed from server.
-{% endapi-method-response-example-description %}
-
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.delix.ir/v1" path="/extracts/:uuid" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-If extract is find and not cleaned from server yet, an Extract object will be returned and its \`status\` can be used to determine if extraction is done or not yet.
+If extract is not found or is removed from our servers.
 {% endapi-method-response-example-description %}
 
 ```
