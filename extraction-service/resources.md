@@ -197,14 +197,13 @@ This object represent output of processed pages from an actual source file when 
         </p>
         <p><em>ExtractFilePage[] or</em>
         </p>
-        <p><em>PaginatedExtractFilePages</em>
+        <p><em>string</em>
         </p>
       </td>
       <td style="text-align:left">
         <p>If the execution was synchronize, Array of ExtractFilePage which keeps
           the output text.</p>
-        <p>If the execution was asynchronous, it&apos;ll be PaginatedExtractFilePages<em>.</em>
-        </p>
+        <p>If the execution was asynchronous, it&apos;ll be a URL to paginate results.</p>
       </td>
     </tr>
   </tbody>
