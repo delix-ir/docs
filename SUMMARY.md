@@ -14,4 +14,5 @@
 * [Engines](extraction-service/process-pdfs.md)
 * [Resources](extraction-service/resources.md)
 * [Error Handling](errors.md)
+* [Resources](resources.md)
 
