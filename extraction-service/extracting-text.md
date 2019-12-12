@@ -191,22 +191,34 @@ Responses a full PaginatedExtractFilePages.
 {
     'data': [
         {
-            'number': 1,
+            'number': 31,
             'status': 'processed',
-            'text': 'محتوای صفحه اول'
+            'text': 'محتوای صفحه 31 ام'
         },
         {
-            'number': 2,
+            'number': 32,
             'status': 'failed',
         },
         {
-            'number': 3,
+            'number': 33,
             'status': 'processed',
-            'text': 'محتوای صفحه سوم'
+            'text': 'محتوای صفحه 33 ام'
         },
     ],
     'links': {
-        'first': '
+        'first': 'https://api.delix.ir/v1/extracts/bd18e9f7-0186-406e-86c1-3aa0ddd72c01/files/123e4567-e89b-12d3-a456-426655440000/contents?page=1',
+        'last': 'https://api.delix.ir/v1/extracts/bd18e9f7-0186-406e-86c1-3aa0ddd72c01/files/123e4567-e89b-12d3-a456-426655440000/contents?page=3',
+        'prev': 'https://api.delix.ir/v1/extracts/bd18e9f7-0186-406e-86c1-3aa0ddd72c01/files/123e4567-e89b-12d3-a456-426655440000/contents?page=2',
+        'next': null,
+    },
+    'meta': {
+        'current_page': 3,
+        'last_page': 3,
+        'total': 33,
+        'from': 31,
+        'to': 33,
+        'per_page': 15,
+        'path': 'https://api.delix.ir/v1/extracts/bd18e9f7-0186-406e-86c1-3aa0ddd72c01/files/123e4567-e89b-12d3-a456-426655440000/contents'
     }
 }
 ```
