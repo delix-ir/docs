@@ -35,9 +35,9 @@ Lets services know which files and pages must be processed.
       </td>
     </tr>
   </tbody>
-</table>## ProcessedSyncExtract
+</table>## Extract
 
-The response of an extraction request that has been done synchronize.
+The response of an extraction request that has been finished.
 
 <table>
   <thead>
@@ -63,7 +63,8 @@ The response of an extraction request that has been done synchronize.
         <p><em>string</em>
         </p>
       </td>
-      <td style="text-align:left">Currently always <code>processed</code>.</td>
+      <td style="text-align:left">Either <code>processing</code> for queued (async) extracts or <code>processed</code> if
+        it&apos;s been finished and results are available.</td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -136,7 +137,11 @@ The response of an extraction request that has been done synchronize.
         <p><em>integer</em>
         </p>
       </td>
-      <td style="text-align:left">Number of pages which couldn&apos;t be processed successfully.</td>
+      <td style="text-align:left">
+        <p><em>(Will be available if extraction is done)<br /></em>
+        </p>
+        <p>Number of pages which couldn&apos;t be processed successfully.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">
@@ -145,21 +150,29 @@ The response of an extraction request that has been done synchronize.
         <p><em>integer</em>
         </p>
       </td>
-      <td style="text-align:left">Amount of credits returned to your account due to failed pages.</td>
+      <td style="text-align:left">
+        <p><em>(Will be available if extraction is done)<br /></em>
+        </p>
+        <p>Amount of credits returned to your account due to failed pages.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">
         <p><b>files</b>
         </p>
-        <p><em>AsyncExtractFile[]</em>
+        <p><em>ExtractFile[]</em>
         </p>
       </td>
-      <td style="text-align:left">An array of AsyncExtractFile which includes actual output.</td>
+      <td style="text-align:left">
+        <p><em>(Will be available if extraction is done)<br /></em>
+        </p>
+        <p>An array of ExtractFile which includes actual output or a link to them.</p>
+      </td>
     </tr>
   </tbody>
-</table>## AsyncExtractPage
+</table>## ExtractFile
 
-This object represent output of processed pages from an actual source file.
+This object represent output of processed pages from an actual source file when execution is done.
 
 <table>
   <thead>
@@ -182,10 +195,16 @@ This object represent output of processed pages from an actual source file.
       <td style="text-align:left">
         <p><b>pages</b>
         </p>
-        <p><em>ExtractFilePage[]</em>
+        <p><em>ExtractFilePage[] or</em>
+        </p>
+        <p><em>PaginatedExtractFilePages</em>
         </p>
       </td>
-      <td style="text-align:left"><em>Array of ExtractFilePage which keeps the output text.</em>
+      <td style="text-align:left">
+        <p>If the execution was synchronize, Array of ExtractFilePage which keeps
+          the output text.</p>
+        <p>If the execution was asynchronous, it&apos;ll be PaginatedExtractFilePages<em>.</em>
+        </p>
       </td>
     </tr>
   </tbody>
@@ -233,5 +252,7 @@ This object includes a single output page details.
       </td>
     </tr>
   </tbody>
-</table>
+</table>## PaginatedExtractFilePages
+
+
 
