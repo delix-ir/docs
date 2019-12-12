@@ -83,7 +83,7 @@ Get List of Files
 {% endapi-method-summary %}
 
 {% api-method-description %}
-ows you to get index stored files which are available to be used.
+This endpoint allows you to get index stored files which are available to be used.
 {% endapi-method-description %}
 
 {% api-method-spec %}
