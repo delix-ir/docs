@@ -2,7 +2,7 @@
 
 ## Image Extraction Methods
 
-Extracting images content process is synchronize which means the result of all OCRed pages will be available instantly in the response of the request.
+Extracting images content process is synchronize which means the result of all OCRed pages will be available in the response of the request.
 
 Currently only 5 stored image files can be extracted in each request.
 
@@ -80,11 +80,9 @@ Files are processed. The response in a ProcessedSyncExtract.
 
 ## PDF Extraction Methods
 
-
-
 Extracting PDF pages content can be done both synchronously and asynchronously.
 
-By requesting synchronous execution, result will be available instantly but in a request, you're limited to 5 specified pages only.
+By requesting synchronous execution, result will be available in the response of the request but you're limited to specify up to 5 pages only.
 
 In asynchronous execution however, you can specify up to 150 pages per PDF but the result won't be available in the response of the request. Instead, it'll be added to processing queue and can be accessed later via direct request or a callback URL which will be called after finishing processing.
 
