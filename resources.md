@@ -71,5 +71,10 @@
       <td style="text-align:left">Related service doesn&apos;t support given file type. For example, you
         can&apos;t request PDF file extraction in <code>v1/image-extraction</code> endpoint.</td>
     </tr>
+    <tr>
+      <td style="text-align:left">FILE_UNDER_PROCESSING</td>
+      <td style="text-align:left">File is under processing by one of the services and can&apos;t be deleted.</td>
+    </tr>
   </tbody>
 </table>
+
